@@ -3,5 +3,6 @@
     <h1>{{#link-to 'reminders.reminder' reminder.id class="spec-reminder-item"}}{{reminder.title}}{{/link-to}}</h1>
     <p>{{reminder.date}}</p>
   {{/each}}
+  {{#link-to 'reminders.add-reminder' class="add-new-button"}}<button type="'button'" name="button">Add Reminder</button>{{/link-to}}
   {{outlet}}
 </div>

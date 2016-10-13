@@ -14,7 +14,7 @@ a {
   color: #283C63;
   text-decoration: none;
   &:hover {
-    font-size: 30px;
+    color: lighten(#283C63, 15%);
   }
 }
 
