@@ -1,8 +1,5 @@
 <div>
   <h2>New Reminder</h2>
-
-  {{title}}
-
   <form class="add-reminder-form" {{action 'createReminder' on="submit"}}>
     <label>
       Title
@@ -18,7 +15,4 @@
     </label>
     <input type="submit" value="Submit">
   </form>
-
-  {{outlet}}
-
 </div>
