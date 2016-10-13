@@ -1,0 +1,43 @@
+body {
+  background: #FBE8D3;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0.5em;
+}
+
+a {
+  color: #283C63;
+  text-decoration: none;
+  &:hover {
+    font-size: 30px;
+  }
+}
+
+.default-message {
+  color: #F85F73;
+}
+
+.app-title {
+  color: #283C63;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.active {
+  background: #F85F73;
+}
+
+.reminder-details {
+  background: darken(#FBE8D3, 10%);
+  padding: 5px;
+}
+
+.spec-reminder-title {
+  color: #283C63;
+  margin-top: 0;
+}

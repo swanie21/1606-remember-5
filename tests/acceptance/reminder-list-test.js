@@ -1,14 +1,20 @@
 /* globals server */
 
-import { test, skip } from 'qunit';
+import { test } from 'qunit';
 import moduleForAcceptance from 'remember/tests/helpers/module-for-acceptance';
 
 import Ember from 'ember';
 
-moduleForAcceptance('Acceptance | reminders list');
+moduleForAcceptance('Acceptance | reminders list', {
+  beforeEach() {
+    server.createList('reminder', 5);
+  },
+  afterEach() {
+    server.shutdown();
+  }
+});
 
 test('viewing the homepage', function(assert) {
-  server.createList('reminder', 5);
 
   visit('/');
 
@@ -18,8 +24,7 @@ test('viewing the homepage', function(assert) {
   });
 });
 
-skip('clicking on an individual item', function(assert) {
-  server.createList('reminder', 5);
+test('clicking on an individual item', function(assert) {
 
   visit('/');
   click('.spec-reminder-item:first');
