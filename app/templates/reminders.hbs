@@ -1,7 +1,7 @@
 <div class="reminders">
   {{#each model as |reminder|}}
     <h1>{{#link-to 'reminders.reminder' reminder.id class="spec-reminder-item"}}{{reminder.title}}{{/link-to}}</h1>
-    <p>{{reminder.date}}</p>
+    <p class="reminder-date">{{reminder.date}}</p>
   {{/each}}
   {{#link-to 'reminders.new' class="add-new-button"}}<button type="'button'" name="button">Add Reminder</button>{{/link-to}}
   {{outlet}}
