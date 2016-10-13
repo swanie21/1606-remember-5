@@ -1,6 +1,7 @@
 <div class="reminders">
   {{#each model as |reminder|}}
-    <p>{{#link-to 'reminder' reminder}}{{reminder.title}}{{/link-to}}</p>
+    <h1>{{#link-to 'reminders.reminder' reminder}}{{reminder.title}}{{/link-to}}</h1>
+    <p>{{reminder.date}}</p>
   {{/each}}
   {{outlet}}
 </div>

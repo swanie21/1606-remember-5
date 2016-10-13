@@ -1,11 +1,11 @@
 {{outlet}}
 
 <div class="spec-reminder-item">
-  <h3>{{reminder.title}}</h3>
-  <p>{{reminder.date}}</p>
+  <h3>{{model.title}}</h3>
+  <p>{{model.date}}</p>
 
-  {{#if reminder.notes}}
-    <p>{{reminder.notes}}</p>
+  {{#if model.notes}}
+    <p>{{model.notes}}</p>
   {{/if}}
 
   <button type="'button'" name="button">Pin Reminder</button>
