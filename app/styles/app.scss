@@ -1,5 +1,7 @@
+@import "_variables.scss";
+
 body {
-  background: #FBE8D3;
+  background: $color-tan-light;
 }
 
 h1 {
@@ -11,33 +13,33 @@ p {
 }
 
 a {
-  color: #283C63;
+  color: $color-blue-dark;
   text-decoration: none;
   &:hover {
-    color: lighten(#283C63, 15%);
+    color: lighten($color-blue-dark, 15%);
   }
 }
 
 .default-message {
-  color: #F85F73;
+  color: $color-pink;
 }
 
 .app-title {
-  color: #283C63;
+  color: $color-blue-dark;
   font-size: 40px;
   margin-top: 10px;
 }
 
 .active {
-  background: #F85F73;
+  background: $color-pink;
 }
 
 .reminder-details {
-  background: darken(#FBE8D3, 10%);
+  background: darken($color-tan-light, 10%);
   padding: 5px;
 }
 
 .spec-reminder-title {
-  color: #283C63;
+  color: $color-blue-dark;
   margin-top: 0;
 }
