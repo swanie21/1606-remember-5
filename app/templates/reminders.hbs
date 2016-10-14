@@ -4,7 +4,7 @@
       <h1>{{#link-to 'reminders.reminder' reminder.id class="spec-reminder-item"}}{{reminder.title}}{{/link-to}}</h1>
       <p class="reminder-date">{{reminder.date}}</p>
     {{/each}}
-    {{#link-to 'reminders.new' class="add-new-button"}}<button type="'button'" class="add-reminder-button">Add Reminder</button>{{/link-to}}
+    {{#link-to 'reminders.new' class="add-new-button" tagName="button"}}➕ Reminder{{/link-to}}
   </div>
   <div class="sidebar">
     {{outlet}}
