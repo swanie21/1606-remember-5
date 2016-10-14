@@ -13,7 +13,7 @@ p {
 }
 
 a {
-  color: #283C63;
+  color: $color-blue-dark;
   text-decoration: none;
   &:hover {
     color: lighten($color-blue-dark, 15%);
@@ -52,7 +52,7 @@ a {
   width: 33%;
 }
 
-.sidebar {
+.main-content {
   width: 66%;
 }
 
