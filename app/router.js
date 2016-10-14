@@ -11,7 +11,6 @@ Router.map(function() {
     this.route('reminder', { path: ':reminder_id' });
     this.route('new');
   });
-  this.route('reminder');
 });
 
 export default Router;

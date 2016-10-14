@@ -1,15 +1,15 @@
-@import "_variables.scss";
+@import '_variables.scss';
 
 body {
   background: $color-tan-light;
 }
 
 h1 {
-  margin-bottom: 0;
+  margin: 20px 0 0 10px;
 }
 
 p {
-  margin-top: 0.5em;
+  margin: 10px 0 5px 10px;
 }
 
 a {
@@ -18,10 +18,6 @@ a {
   &:hover {
     color: lighten($color-blue-dark, 15%);
   }
-}
-
-.default-message {
-  color: $color-pink;
 }
 
 .app-title {
@@ -34,6 +30,10 @@ a {
   background: $color-pink;
 }
 
+.default-message {
+  color: $color-pink;
+}
+
 .reminder-details {
   background: darken($color-tan-light, 10%);
   padding: 5px;
@@ -42,4 +42,23 @@ a {
 .spec-reminder-title {
   color: $color-blue-dark;
   margin-top: 0;
+}
+
+.reminders {
+  display: flex;
+}
+
+.reminders-list {
+  width: 33%;
+}
+
+.main-content {
+  width: 66%;
+}
+
+.add-reminder-button {
+  margin: 20px 0 0 5px;
+  &:active {
+    background: none;
+  }
 }
