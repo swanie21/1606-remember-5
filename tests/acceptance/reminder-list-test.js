@@ -34,3 +34,26 @@ test('clicking on an individual item', function(assert) {
     assert.equal(Ember.$('.spec-reminder-item:first').text().trim(), Ember.$('.spec-reminder-title').text().trim());
   });
 });
+
+test('clicking on "Add reminder" button creates a new reminder', function(assert) {
+
+  visit('/');
+  click('.add-new-button');
+  fillIn('.reminder-title-input', 'do laundry');
+  fillIn('.reminder-date-input', '2016-10-12');
+  fillIn('.reminder-notes-input', 'hang clothes up afterwards');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/new');
+    assert.equal(find('.reminder-title-input').val(), 'do laundry');
+    assert.equal(find('.reminder-date-input').val(), '2016-10-12');
+    assert.equal(find('.reminder-notes-input').val(), 'hang clothes up afterwards');
+  });
+
+  click('.submit-button');
+
+  andThen(function() {
+    assert.equal(Ember.$('.spec-reminder-item:last').text().trim(), 'do laundry');
+    assert.equal(Ember.$('.reminder-date:last').text().trim(), 'Tue Oct 11 2016 18:00:00 GMT-0600 (MDT)');
+  });
+});
