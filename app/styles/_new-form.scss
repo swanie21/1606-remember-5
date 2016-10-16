@@ -1,0 +1,33 @@
+.new-content {
+  padding: 15px;
+}
+
+.new-content-title {
+  color: $color-blue-dark;
+}
+
+.add-reminder-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-content-label {
+  margin-top: 10px;
+}
+
+.reminder-notes-input {
+  align-items: flex-start;
+}
+
+.submit-button {
+  border: 0;
+  background: $color-blue-dark;
+  color: white;
+  margin-top: 15px;
+  width: 60px;
+  &:hover {
+    background: white;
+    color: $color-blue-dark;
+    border: 1px solid $color-blue-dark;
+  }
+}

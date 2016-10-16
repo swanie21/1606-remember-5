@@ -1,0 +1,29 @@
+.reminder-details {
+  background: darken($color-tan-light, 10%);
+  padding: 15px;
+}
+
+.spec-reminder-title {
+  color: $color-blue-dark;
+  margin-top: 0;
+}
+
+.spec-reminder-date {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.spec-reminder-notes {
+  margin-bottom: 10px;
+}
+
+button {
+  background: $color-blue-dark;
+  color: white;
+  border: 0;
+  &:hover {
+    background: white;
+    color: $color-blue-dark;
+    border: 1px solid $color-blue-dark;
+  }
+}
