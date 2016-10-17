@@ -7,8 +7,12 @@ export default Ember.Controller.extend({
       this.toggleProperty('isEditing', true);
     },
     update() {
+      let reminder = this.get('model').getProperties('date');
+      reminder.date = new Date(reminder.date);
+      this.get('model').save().then(() => {
+        this.setProperties({ title: '', date: '', notes: '' });
+        });
       this.toggleProperty('isEditing');
-      this.attrs.update();
     }
   },
   isEditing: false

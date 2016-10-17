@@ -3,8 +3,9 @@
 
   {{#if isEditing}}
 
-    {{!-- {{new update=(action "update") title=model.title date=model.date notes=model.notes}}
-    <button type="button" name="button" {{action "update"}}>Save Reminder</button> --}}
+    {{reminder-form reminder=model submitForm=(action 'update')}}
+
+    {{!-- <button type="button" name="button" {{action "update"}}>Save Reminder</button> --}}
 
   {{else}}
 
