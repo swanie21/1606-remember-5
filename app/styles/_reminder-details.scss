@@ -1,6 +1,6 @@
 .reminder-details {
   background: darken($color-tan-light, 10%);
-  padding: 15px;
+  padding: 30px 20px;
 }
 
 .spec-reminder-title {
@@ -14,16 +14,17 @@
 }
 
 .spec-reminder-notes {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-button {
+.edit-button,
+.pin-button {
   background: $color-blue-dark;
-  color: white;
   border: 0;
+  color: white;
   &:hover {
     background: white;
-    color: $color-blue-dark;
     border: 1px solid $color-blue-dark;
+    color: $color-blue-dark;
   }
 }

@@ -29,10 +29,10 @@ a {
   background: $color-pink;
   color: $color-blue-dark;
   font-family: 'Montserrat', sans-serif;
-  font-size: 50px;
-  height: 60px;
+  font-size: 60px;
+  height: 80px;
   margin: 0;
-  padding: 10px 0 10px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
@@ -42,6 +42,9 @@ a {
 
 .default-message {
   color: $color-pink;
+  font-size: 1.5em;
+  margin-top: 80px;
+  text-align: center;
 }
 
 .reminders {
@@ -49,9 +52,9 @@ a {
 }
 
 .reminders-list {
-  background: lighten(#928A97, 10%);
+  background: lighten(#928A97, 15%);
   overflow-y: scroll;
-  padding: 15px;
+  padding: 20px;
   height: 85vh;
   width: 33%;
 }
@@ -65,8 +68,16 @@ a {
   width: 66%;
 }
 
-.add-reminder-button {
-  margin-left: 30%;
+.add-new-button {
+  background: $color-blue-dark;
+  border: 0;
+  color: white;
+  margin: 50px 0 0 30%;
+  &:hover {
+    background: white;
+    border: 1px solid $color-blue-dark;
+    color: $color-blue-dark;
+  }
   &:active {
     background: none;
   }
