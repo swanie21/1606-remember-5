@@ -1,22 +1,6 @@
-<div>
-  <section class="new-content">
-    <h1 class="new-content-title">New Reminder</h1>
 
-    {{ reminder-form reminder=model submitForm=(action 'createReminder') }}
-    {{!-- <form class="add-reminder-form" {{action 'createReminder' on="submit"}}>
-      <label class="new-content-label">
-        Title
-        {{input value=title class="reminder-title-input"}}
-      </label>
-      <label class="new-content-label">
-        Date
-        {{input type="date" value=date class="reminder-date-input"}}
-      </label>
-      <label class="new-content-label">
-        Notes
-        {{textarea value=notes class="reminder-notes-input"}}
-      </label>
-      <input type="submit" value="Submit" class="submit-button">
-    </form> --}}
-  </section>
-</div>
+<section class="new-content">
+  <h1 class="new-content-title">New Reminder</h1>
+
+  {{ reminder-form reminder=model submitForm=(action 'createReminder') }}
+</section>
