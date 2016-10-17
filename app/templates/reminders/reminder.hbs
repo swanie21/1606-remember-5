@@ -3,18 +3,20 @@
 
   {{#if isEditing}}
 
-    {{reminder update=(action "update") title=model.title date=model.date notes=model.notes}}
+    {{!-- {{new update=(action "update") title=model.title date=model.date notes=model.notes}}
+    <button type="button" name="button" {{action "update"}}>Save Reminder</button> --}}
 
   {{else}}
-  <p class="spec-reminder-date">{{model.date}}</p>
 
-  {{#if model.notes}}
-    <p class="spec-reminder-notes">{{model.notes}}</p>
-  {{/if}}
+    <p class="spec-reminder-date">{{model.date}}</p>
 
-  <button type="button" name="button" class="edit-button">Edit Reminder</button>
-  <button type="button" name="button" class="pin-button">Pin Reminder</button>
-
+    {{#if model.notes}}
+      <p class="spec-reminder-notes">{{model.notes}}</p>
     {{/if}}
+
+    <button type="button" name="button" class="edit-button" {{action "toggleEditing"}}>Edit Reminder</button>
+    <button type="button" name="button" class="pin-button">Pin Reminder</button>
+
+  {{/if}}
 
 </div>
