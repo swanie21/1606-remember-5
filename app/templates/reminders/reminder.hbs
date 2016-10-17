@@ -1,5 +1,11 @@
 <div class="reminder-details">
   <h1 class="spec-reminder-title">{{model.title}}</h1>
+
+  {{#if isEditing}}
+
+    {{reminder update=(action "update") title=model.title date=model.date notes=model.notes}}
+
+  {{else}}
   <p class="spec-reminder-date">{{model.date}}</p>
 
   {{#if model.notes}}
@@ -8,4 +14,7 @@
 
   <button type="button" name="button" class="edit-button">Edit Reminder</button>
   <button type="button" name="button" class="pin-button">Pin Reminder</button>
+
+    {{/if}}
+
 </div>
