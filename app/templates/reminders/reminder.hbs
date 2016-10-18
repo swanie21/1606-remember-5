@@ -6,6 +6,7 @@
   {{#if isEditing}}
 
     {{reminder-form reminder=model submitForm=(action "update")}}
+    
     <button type="button" name="button" class="revert-button" {{action "revertChanges" reminder.id on="click"}}>Revert</button>
 
 
