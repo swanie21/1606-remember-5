@@ -1,5 +1,6 @@
 @import '_reset.scss';
 @import '_variables.scss';
+@import '_mixins.scss';
 @import '_new-form.scss';
 @import '_reminder-details';
 
@@ -9,12 +10,9 @@ body {
 }
 
 h1 {
+  font-size: 20px;
   font-weight: 700;
   margin: 10px 0 5px 0;
-}
-
-p {
-  // margin: 10px 0 5px 10px;
 }
 
 a {
@@ -25,14 +23,17 @@ a {
   }
 }
 
+p {
+  line-height: 1.3em;
+}
+
 .app-title {
   background: $color-pink;
   color: $color-blue-dark;
   font-family: 'Montserrat', sans-serif;
   font-size: 60px;
-  height: 80px;
   margin: 0;
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
 }
 
@@ -60,7 +61,7 @@ a {
 }
 
 .reminder-date {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-style: italic;
 }
 
@@ -69,15 +70,9 @@ a {
 }
 
 .add-new-button {
-  background: $color-blue-dark;
-  border: 0;
-  color: white;
+  @include button-format;
   margin: 50px 0 0 30%;
-  &:hover {
-    background: white;
-    border: 1px solid $color-blue-dark;
-    color: $color-blue-dark;
-  }
+  padding: 2px 15px 2px 10px;
   &:active {
     background: none;
   }

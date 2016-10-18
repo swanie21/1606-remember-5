@@ -20,15 +20,8 @@
   align-items: flex-start;
 }
 
-.submit-button {
-  border: 0;
-  background: $color-blue-dark;
-  color: white;
+.save-button {
+  @include button-format;
   margin-top: 15px;
   width: 60px;
-  &:hover {
-    background: white;
-    color: $color-blue-dark;
-    border: 1px solid $color-blue-dark;
-  }
 }
