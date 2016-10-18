@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  isEditing: false,
+
   actions: {
     toggleEditing() {
       this.toggleProperty('isEditing', true);
@@ -8,9 +10,8 @@ export default Ember.Controller.extend({
     update() {
       this.get('model').save().then(() => {
         this.setProperties({ title: '', date: '', notes: '' });
-        });
+      });
       this.toggleProperty('isEditing');
     }
-  },
-  isEditing: false
+  }
 });
