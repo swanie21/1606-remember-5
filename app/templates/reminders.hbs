@@ -2,8 +2,8 @@
   <article class="reminders-list">
     {{#each model as |reminder|}}
       <article class="individual-reminder">
-        <span class="saveCue" hidden={{unless reminder.hasDirtyAttributes 'true'}}>
-          Save your changes
+        <span class="save-cue" hidden={{unless reminder.hasDirtyAttributes 'true'}}>
+          &#9998; Save your changes
         </span>
         <h1>{{#link-to 'reminders.reminder' reminder.id class="spec-reminder-item"}}{{reminder.title}}{{/link-to}}</h1>
         <p class="reminder-date">{{reminder.date}}</p>

@@ -122,3 +122,14 @@ test('when in edit mode, clicking the "Revert" button rolls back any changes mad
   });
 
 });
+
+test('when editing a reminder a warning in the sidebar will display if user has unsaved changes', function(assert) {
+  visit('/');
+  click('.spec-reminder-item:last');
+  click('.edit-button');
+  fillIn('.reminder-title-input', 'make coffee');
+
+  andThen(function() {
+    assert.equal(Ember.$('.save-cue:visible').length, 1);
+  });
+});
