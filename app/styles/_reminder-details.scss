@@ -18,11 +18,16 @@
 }
 
 .edit-button,
-.pin-button {
+.pin-button,
+.revert-button {
   @include button-format;
   padding: 2px 10px;
 }
 
 .edit-button {
   margin-right: 15px;
+}
+
+.revert-button:disabled {
+// greyish color like sidebar background?
 }
