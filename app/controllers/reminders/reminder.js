@@ -16,7 +16,6 @@ export default Ember.Controller.extend({
     },
 
     revertChanges(id) {
-      console.log('Revert Clicked', id);
       this.get('store').findRecord('reminder', id).then((reminder) => {
         reminder.rollbackAttributes();
       });
