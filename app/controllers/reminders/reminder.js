@@ -20,5 +20,5 @@ export default Ember.Controller.extend({
         reminder.rollbackAttributes();
       });
     }
-  },
+  }
 });
