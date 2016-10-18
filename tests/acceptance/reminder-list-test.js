@@ -50,7 +50,7 @@ test('clicking on "Add reminder" button creates a new reminder', function(assert
     assert.equal(find('.reminder-notes-input').val(), 'hang clothes up afterwards');
   });
 
-  click('.submit-button');
+  click('.save-button');
 
   andThen(function() {
     assert.equal(Ember.$('.spec-reminder-item:last').text().trim(), 'do laundry');
@@ -68,7 +68,7 @@ test('clicking on "Edit reminder" button allows the user to edit the reminder', 
     assert.equal(find('.reminder-title-input').val(), 'do laundry');
   });
 
-  click('.submit-button');
+  click('.save-button');
 
   andThen(function() {
     assert.equal(Ember.$('.spec-reminder-item:last').text().trim(), 'do laundry');
