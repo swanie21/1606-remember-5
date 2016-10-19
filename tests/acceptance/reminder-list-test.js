@@ -140,7 +140,6 @@ test('clicking the "delete" button deletes a reminder from the store', function(
     assert.equal(Ember.$('.spec-reminder-item').length, 5);
   });
 
-  // click('.spec-reminder-item:first');
   click('.remove-button');
 
   andThen(function() {
