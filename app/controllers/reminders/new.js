@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
     createReminder() {
       let reminder = this.get('model').getProperties('title', 'date', 'notes');
       this.get('store').createRecord('reminder', reminder).save().then(() => {
-        this.setProperties({ title: '', date: '', notes: '' });
+        this.transitionToRoute('reminders');
       });
     }
   }
