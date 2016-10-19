@@ -1,12 +1,12 @@
-<div class="reminders">
-  <div class="reminders-list">
+<section class="reminders">
+  <article class="reminders-list">
     {{#each model as |reminder|}}
       <h1>{{#link-to 'reminders.reminder' reminder.id class="spec-reminder-item"}}{{reminder.title}}{{/link-to}}</h1>
       <p class="reminder-date">{{reminder.date}}</p>
     {{/each}}
-    {{#link-to 'reminders.new' class="add-new-button" tagName="button"}}➕ Reminder{{/link-to}}
-  </div>
-  <div class="main-content">
+    {{#link-to 'reminders.new' class="add-new-button" tagName="button"}}&#65291; Reminder{{/link-to}}
+  </article>
+  <section class="main-content">
     {{outlet}}
-  </div>
-</div>
+  </section>
+</section>

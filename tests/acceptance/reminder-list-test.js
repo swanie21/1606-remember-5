@@ -50,10 +50,35 @@ test('clicking on "Add reminder" button creates a new reminder', function(assert
     assert.equal(find('.reminder-notes-input').val(), 'hang clothes up afterwards');
   });
 
-  click('.submit-button');
+  click('.save-button');
 
   andThen(function() {
     assert.equal(Ember.$('.spec-reminder-item:last').text().trim(), 'do laundry');
-    assert.equal(Ember.$('.reminder-date:last').text().trim(), 'Tue Oct 11 2016 18:00:00 GMT-0600 (MDT)');
+    assert.equal(Ember.$('.reminder-date:last').text().trim(), 'Wednesday, Oct 12th 2016');
+  });
+});
+
+test('clicking on "Edit reminder" button allows the user to edit the reminder', function(assert) {
+
+  visit('/');
+  click('.add-new-button');
+  fillIn('.reminder-title-input', 'do laundry');
+
+  andThen(function() {
+    assert.equal(find('.reminder-title-input').val(), 'do laundry');
+  });
+
+  click('.save-button');
+
+  andThen(function() {
+    assert.equal(Ember.$('.spec-reminder-item:last').text().trim(), 'do laundry');
+  });
+
+  click('.spec-reminder-item:last');
+  click('.edit-button');
+  fillIn('.reminder-title-input', 'feed the dog');
+
+  andThen(function() {
+    assert.equal(find('.reminder-title-input').val(), 'feed the dog');
   });
 });
