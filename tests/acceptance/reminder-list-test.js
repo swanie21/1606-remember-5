@@ -133,3 +133,17 @@ test('when editing a reminder a warning in the sidebar will display if user has 
     assert.equal(Ember.$('.save-cue:visible').length, 1);
   });
 });
+
+test('clicking the "delete" button deletes a reminder from the store', function(assert) {
+  visit('/');
+  andThen(function() {
+    assert.equal(Ember.$('.spec-reminder-item').length, 5);
+  });
+
+  click('.spec-reminder-item:first');
+  click('.remove-button');
+
+  andThen(function() {
+    assert.equal(Ember.$('.spec-reminder-item').length, 4);
+  });
+});
