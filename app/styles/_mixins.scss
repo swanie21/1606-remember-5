@@ -1,0 +1,10 @@
+@mixin button-format {
+  background: $color-blue-dark;
+  border: 1px solid $color-blue-dark;
+  color: white;
+  font-size: 20px;
+  &:hover {
+    background: $color-tan-light;
+    color: $color-blue-dark;
+  }
+}

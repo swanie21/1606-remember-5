@@ -1,0 +1,27 @@
+.new-content {
+  padding: 20px;
+}
+
+.new-content-title {
+  color: $color-blue-dark;
+  font-size: 1.5em;
+}
+
+.add-reminder-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-content-label {
+  margin-top: 10px;
+}
+
+.reminder-notes-input {
+  align-items: flex-start;
+}
+
+.save-button {
+  @include button-format;
+  margin-top: 15px;
+  width: 60px;
+}

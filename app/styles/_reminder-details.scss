@@ -1,0 +1,28 @@
+.reminder-details {
+  background: darken($color-tan-light, 10%);
+  padding: 30px 20px;
+}
+
+.spec-reminder-title {
+  color: $color-blue-dark;
+  margin-top: 0;
+}
+
+.spec-reminder-date {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.spec-reminder-notes {
+  margin-bottom: 20px;
+}
+
+.edit-button,
+.pin-button {
+  @include button-format;
+  padding: 2px 10px;
+}
+
+.edit-button {
+  margin-right: 15px;
+}
