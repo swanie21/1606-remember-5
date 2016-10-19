@@ -54,7 +54,7 @@ test('clicking on "Add reminder" button creates a new reminder', function(assert
 
   andThen(function() {
     assert.equal(Ember.$('.spec-reminder-item:last').text().trim(), 'do laundry');
-    assert.equal(Ember.$('.reminder-date:last').text().trim(), 'Wednesday, Oct 12th 2016');
+    assert.equal(Ember.$('.reminder-date:last').text().trim(), '2016-10-12');
   });
 });
 
@@ -104,7 +104,7 @@ test('when in edit mode, clicking the "Revert" button rolls back any changes mad
   andThen(function() {
     assert.equal(Ember.$('.spec-reminder-item:last').text().trim(), 'feed the dog');
   });
-  
+
   click('.spec-reminder-item:last');
   click('.edit-button');
   andThen(function() {
