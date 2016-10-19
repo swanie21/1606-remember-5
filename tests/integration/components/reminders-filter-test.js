@@ -1,7 +1,7 @@
 import { moduleForComponent, skip } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('reminder-form', 'Integration | Component | reminder form', {
+moduleForComponent('reminders-filter', 'Integration | Component | reminders filter', {
   integration: true
 });
 
@@ -9,15 +9,15 @@ skip('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{reminder-form}}`);
+  this.render(hbs`{{reminders-filter}}`);
 
   assert.equal(this.$().text().trim(), '');
 
   // Template block usage:
   this.render(hbs`
-    {{#reminder-form}}
+    {{#reminders-filter}}
       template block text
-    {{/reminder-form}}
+    {{/reminders-filter}}
   `);
 
   assert.equal(this.$().text().trim(), 'template block text');

@@ -1,6 +1,12 @@
 <section class="reminders">
+
   <article class="reminders-list">
-    {{#each model as |reminder|}}
+
+    <article class="search-bar">
+      {{reminders-filter value=search searchUpdated=(action "handleSearch") class="search-input"}}
+    </article>
+
+    {{#each reminders as |reminder|}}
       <article class="individual-reminder">
 
         <span class="save-cue" hidden={{unless reminder.hasDirtyAttributes 'true'}}>
@@ -16,9 +22,11 @@
     {{/each}}
 
     {{#link-to 'reminders.new' class="add-new-button" tagName="button"}}&#65291; Reminder{{/link-to}}
+
   </article>
 
   <section class="main-content">
     {{outlet}}
   </section>
+
 </section>
