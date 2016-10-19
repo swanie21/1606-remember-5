@@ -18,7 +18,8 @@
 }
 
 .edit-button,
-.pin-button {
+.pin-button,
+.revert-button {
   @include button-format;
   padding: 2px 10px;
 }
