@@ -38,7 +38,7 @@ p {
   text-align: center;
 }
 
-.active {
+.spec-reminder-item.active {
   background: $color-pink;
   padding: 0 5px;
 }
@@ -63,7 +63,7 @@ p {
 }
 
 .reminder-date {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   font-style: italic;
 }
 

@@ -7,11 +7,11 @@
           &#9998; Save your changes
         </span>
 
-        {{delete-button reminder=reminder}}
-
         <h1>{{#link-to 'reminders.reminder' reminder.id class="spec-reminder-item"}}{{reminder.title}}{{/link-to}}</h1>
 
         <p class="reminder-date">{{reminder.date}}</p>
+
+        {{delete-button reminder=reminder}}
       </article>
     {{/each}}
 
