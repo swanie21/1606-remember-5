@@ -119,7 +119,6 @@ test('when in edit mode, clicking the "Revert" button rolls back any changes mad
   andThen(function() {
     assert.equal(find('.reminder-title-input').val(), 'feed the dog');
   });
-
 });
 
 test('when editing a reminder a warning in the sidebar will display if user has unsaved changes', function(assert) {

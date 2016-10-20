@@ -25,3 +25,19 @@
   margin: 15px 0;
   width: 60px;
 }
+
+input[type=text], input[type=date]{
+  font-size: 18px;
+  padding: 5px;
+  width: 50%;
+}
+
+textarea {
+  font-size: 18px;
+  height: 80px;
+  width: 50%;
+}
+
+label {
+  font-size: 18px;
+}

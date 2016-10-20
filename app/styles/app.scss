@@ -32,9 +32,9 @@ p {
   background: $color-pink;
   color: $color-blue-dark;
   font-family: 'Montserrat', sans-serif;
-  font-size: 60px;
+  font-size: 55px;
   margin: 0;
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
@@ -56,15 +56,15 @@ p {
 
 .reminders-list {
   background: lighten(#928A97, 15%);
+  height: 85vh;
   overflow-y: scroll;
   padding: 20px;
-  height: 85vh;
   width: 33%;
 }
 
 .reminder-date {
-  margin-bottom: 5px;
   font-style: italic;
+  margin-bottom: 5px;
 }
 
 .individual-reminder {

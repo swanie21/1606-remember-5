@@ -6,7 +6,6 @@ export default Ember.Controller.extend({
 
   reminders: Ember.computed('search', function() {
     const search = this.get('search');
-
     let reminders = this.get('model');
 
     if(search) {
