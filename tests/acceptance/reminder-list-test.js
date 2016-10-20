@@ -2,7 +2,6 @@
 
 import { test } from 'qunit';
 import moduleForAcceptance from 'remember/tests/helpers/module-for-acceptance';
-
 import Ember from 'ember';
 
 moduleForAcceptance('Acceptance | reminders list', {
@@ -144,14 +143,5 @@ test('clicking the "delete" button deletes a reminder from the store', function(
 
   andThen(function() {
     assert.equal(Ember.$('.spec-reminder-item').length, 4);
-  });
-});
-
-test('filter reminder to only show that one reminder that is searched for', function(assert) {
-  visit('/');
-  fillIn('.search-input', 'take a shower');
-
-  andThen(function() {
-    assert.equal(find('.spec-reminder-item').length, 1);
   });
 });
